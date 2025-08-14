@@ -1,12 +1,73 @@
+
+    :root{
+      --bg: #000;          /* fundo preto */
+      --text: #fff;        /* texto branco */
+      --muted: #b3b3b3;    /* texto secundário */
+      --card: #0d0d0d;     /* fundo dos cards */
+      --accent: #000000;   /* destaque sutil (verde) */
+      --accent-2: #60a5fa; /* destaque sutil (azul) */
+      --border: #1f1f1f;   /* borda discreta */
+    }
+
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: "Montserrat", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 800px at 70% -20%, rgba(0, 0, 0, 0.08), transparent),
+                  radial-gradient(800px 600px at -10% 110%, rgba(96,165,250,0.08), transparent),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Hero */
+    .section-1{ padding: 10px 10px 0; }
+    .row{ display:flex; flex-wrap: wrap; align-items:center; justify-content:center; gap:24px; }
+    .col-a{ flex:1 1 360px; min-width: 280px; }
+    .col-b{ flex:1 1 360px; min-width: 280px; display:flex; justify-content:center; }
+    .col-b img{ display:block; width:100%; max-width:420px; height:auto; border-radius:24px; border:1px solid var(--border); }
+
+    h1{ font-size: clamp(2rem, 3.6vw, 3rem); margin: 0; background-image: linear-gradient(90deg,#ffffff,#bbbbbb); -webkit-background-clip:text; color:transparent; }
+    .experiencia{ font-size: clamp(1.25rem, 2.5vw, 1.6rem); background-image: linear-gradient(90deg,#ffffff,#9e9e9e); -webkit-background-clip:text; color:transparent; text-align:center; margin: 20px 0; }
+
+    /* Cards grid (mesmo visual da outra página) */
+    .section-2{ padding: 10px 0; display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap:16px; align-items: stretch; }
+    @media (max-width: 1024px){ .section-2{ grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px){ .section-2{ grid-template-columns: 1fr; } }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent 60%), var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px;
+      display: flex; flex-direction: column; gap: 14px;
+      transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+      box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08) inset;
+    }
+    .card:hover{ transform: translateY(-2px); border-color: #2a2a2a; }
+
+    .card img, .card video{
+      width: 100%; height: auto; display:block; border-radius: 12px; border:1px solid var(--border);
+    }
+
+    .card p, .card h2{ margin: 0; color: var(--text); font-weight:600; font-size: 1rem; }
+    .card .preco{ font-weight:500; color: var(--muted); font-size: .95rem; }
+
+    /* Botão (se quiser usar) */
+    .btn-ver{
+      align-self: start;
+      background: #fff; color:#000; font-weight:700; border:none; border-radius:14px; padding:10px 16px; cursor:pointer; transition: transform .08s ease; }
+    .btn-ver:active{ transform: translateY(1px); }
+
+    /* Social icons section */
+    .contact-icons{ display:flex; gap:20px; margin: 20px 0; justify-content:center; align-items:center; }
+
+    /* Responsividade extra */
+    @media (max-width: 720px){
+      .row{ flex-direction: column; }
+    }
+
 /* Global Styles */
-body {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    background-color: #000000;
-    margin: 0;
-    padding: 10px;
-}
 
 .row {
     display: flex;
@@ -30,15 +91,15 @@ body {
 }
 
 .col-a h1 {
-    font-size: 3.5rem;
-    background-image: linear-gradient(90deg, #3aaaa8, #226160); /* Gradiente de duas cores */
+    font-size: 3.0rem;
+    background-image: linear-gradient(90deg, #ffffff, #bbbbbb); /* Gradiente de duas cores */
     -webkit-background-clip: text; /* Faz com que o gradiente afete o texto */
     color: transparent; /* Define o texto como transparente para mostrar o gradiente */
 }
 
 .experiencia{
     font-size: 1.5rem;
-    background-image: linear-gradient(90deg, #3aaaa8, #226160); /* Gradiente de duas cores */
+    background-image: linear-gradient(90deg, #ffffff, #9e9e9e); /* Gradiente de duas cores */
     -webkit-background-clip: text; /* Faz com que o gradiente afete o texto */
     color: transparent; /* Define o texto como transparente para mostrar o gradiente */
     text-align: center;
@@ -90,7 +151,7 @@ a {
 }
 
 .card {
-    background-color: #133636;
+    border-color: #8c918e; box-shadow: 0 0 0 4px rgba(34,197,94,0.10) inset;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
@@ -103,7 +164,7 @@ a {
 }
 
 .card:hover {
-    transform: scale(1.05); /* Efeito de hover */
+   transform: translateY(-2px); border-color: #2a2a2a;
 }
 
 .card img, .card video {
