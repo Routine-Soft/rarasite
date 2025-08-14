@@ -1,0 +1,116 @@
+<!-- header.html -->
+<header class="header">
+    <a href="/index.html"><div class="logo">IGREJA COMUNHÃO RARA</div></a>
+    <nav class="nav-menu">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul id="nav-links">
+            <a href="/index.html" rel="noopener noreferrer" title="">
+                 <p class="p-navlinks">Home</p>
+            </a>
+            <a href="/pages/baixenossoapp.html" rel="noopener noreferrer" title="">
+                 <p class="p-navlinks">Rara App</p>
+            </a>
+            <!-- <a href="#contact" title="Gmail">
+                 <p class="p-navlinks">Igrejas</p>
+            </a>
+            <a href="#contact" rel="noopener noreferrer" title="">
+                 <p class="p-navlinks">Quem somos</p>
+            </a> -->
+        </ul>
+    </nav>
+</header>
+
+<style>
+/* Header (Cabeçalho) */
+.header {
+    display: flex;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-image: linear-gradient(90deg, #ffffff, #c4c4c4); /* Gradiente de duas cores */
+    -webkit-background-clip: text; /* Faz com que o gradiente afete o texto */
+    color: transparent; /* Define o texto como transparente para mostrar o gradiente */
+    font-family: 'Rajdhani', sans-serif;
+
+}
+
+a{
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-menu ul li {
+    display: inline;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #3aaaa8;
+}
+
+/* Ícone do Menu Hambúrguer */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    background-color: #fff;
+    width: 25px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.p-navlinks{
+    color: #fff;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #000;
+        width: 100%;
+        display: none;
+
+    }
+
+    .nav-menu ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+</style>

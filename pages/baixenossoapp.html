@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Baixe nosso app — Rara App</title>
+  <meta name="description" content="Baixe o aplicativo Rara App para Android e iOS." />
+  <meta property="og:title" content="Baixe o Rara App" />
+  <meta property="og:description" content="Disponível para Android e iOS." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="/css/baixenossoapp.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <script src="/component/header.js"></script>
+
+  <div class="container">
+    <main class="hero">
+      <section>
+        <h2 class="title">Baixe o Rara App</h2>
+        <p class="subtitle">Disponível apenas para Android. Em breve para usuários de Iphone.</p>
+
+        <div class="cards">
+          <!-- Card Android -->
+          <article class="card" aria-labelledby="android-title">
+            <div class="platform">
+              <!-- Ícone Android em SVG -->
+              <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.2 4.3 6.7 2.5m9.1 1.8 1.5-1.8M9 7l-.9-1.6m7.8 1.6.9-1.6M4 12h16m-12 4v2.5c0 .8.7 1.5 1.5 1.5S11 19.3 11 18.5V16m2 0v2.5c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5V16" stroke="currentColor" stroke-width="1.2"/>
+                <rect x="6" y="8" width="12" height="8" rx="2" stroke="currentColor" stroke-width="1.2"/>
+                <circle cx="10" cy="11" r=".8" fill="currentColor"/>
+                <circle cx="14" cy="11" r=".8" fill="currentColor"/>
+              </svg>
+              <strong id="android-title">Android</strong>
+              <span class="badge">Celular e Tablet</span>
+            </div>
+            <p class="subtitle" style="margin:0">Compatível com Android 8.0 ou superior.</p>
+            <!-- Substitua o href abaixo pelo link real da Google Play Store -->
+            <a class="cta android" href="https://play.google.com/store/apps/details?id=com.comunhaorara.raraapp&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" aria-label="Baixar no Google Play">
+              <!-- Logotipo do Google Play (simplificado) -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3 4.7c0-.9.9-1.4 1.6-1l10.7 6.4c.8.5.8 1.7 0 2.2L4.6 18.7C3.9 19.1 3 18.6 3 17.7V4.7Z" fill="currentColor" fill-opacity="0.85"/><path d="M14.8 10.1 18.7 7c.8-.6 2-.1 2 1v8c0 1.1-1.2 1.6-2 1l-3.9-3.1" fill="currentColor" fill-opacity="0.4"/></svg>
+              <span>Baixar no Google Play</span>
+            </a>
+          </article>
+
+          <!-- Card iOS -->
+          <article class="card" aria-labelledby="apple-title">
+            <div class="platform">
+              <!-- Ícone Apple em SVG -->
+              <svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.365 12.188c.01 2.23 1.98 2.973 1.99 2.98-.016.05-.31 1.06-1.03 2.1-.62.905-1.27 1.81-2.29 1.83-.99.02-1.31-.59-2.45-.59-1.14 0-1.5.57-2.45.61-1.01.04-1.78-.98-2.41-1.88-1.32-1.89-2.33-5.34-.97-7.67.67-1.17 1.86-1.92 3.15-1.94.98-.02 1.9.66 2.45.66.55 0 1.68-.82 2.84-.7.48.02 1.84.19 2.71 1.49-.07.04-1.62.94-1.6 2.62Zm-1.86-5.14c.52-.63.88-1.5.79-2.35-.77.03-1.7.52-2.25 1.15-.5.58-.92 1.49-.81 2.37.86.07 1.75-.49 2.27-1.17Z"/>
+              </svg>
+              <strong id="apple-title">iOS</strong>
+              <span class="badge">iPhone & iPad</span>
+            </div>
+            <p class="subtitle" style="margin:0">Compatível com iOS 13.0 ou superior.</p>
+            <!-- Substitua o href abaixo pelo link real da Apple App Store -->
+            <a class="cta apple" href="#" target="_blank" rel="noopener noreferrer" aria-label="Baixar na App Store">
+              <!-- Logotipo da App Store (simplificado) -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M7 17h10M6 12h12M8 7h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span>Em breve</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+<!-- Mock do app (ilustração) -->
+<aside aria-label="Prévia do app">
+  <img 
+    src="/img/telas.png" 
+    alt="Prévia do aplicativo Rara App" 
+    class="screenshot"
+  >
+</aside>
+
+    </main>
+
+  </div>
+
+  <script>
+    // Atualiza o ano automaticamente no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+      <div id="footer-container"></div>
+    <script src="/component/footer.js"></script>
+</body>
+</html>
